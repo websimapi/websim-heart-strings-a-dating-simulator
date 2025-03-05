@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Strings: A Dating Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loading-container">
+            <h1>Heart Strings</h1>
+            <p>Loading your dating adventure...</p>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="game-container" style="display: none;">
+        <div id="header">
+            <h1>Heart Strings</h1>
+            <div class="controls">
+                <button id="tts-toggle" class="active">TTS: ON</button>
+                <button id="settings-btn">Settings</button>
+            </div>
+        </div>
+
+        <div id="main-screen">
+            <div id="character-selection">
+                <h2>Choose Your Date</h2>
+                <div id="characters-list"></div>
+            </div>
+
+            <div id="date-screen" style="display: none;">
+                <div id="location-display">
+                    <img id="location-image" alt="Date location">
+                    <div id="location-name"></div>
+                </div>
+                <div id="character-display">
+                    <img id="character-image" alt="Your date">
+                    <div id="character-name"></div>
+                </div>
+                <div id="dialog-box">
+                    <p id="dialog-text"></p>
+                </div>
+                <div id="response-options"></div>
+                <div id="date-controls">
+                    <button id="change-location-btn">Change Location</button>
+                    <button id="end-date-btn">End Date</button>
+                </div>
+            </div>
+
+            <div id="location-selection" style="display: none;">
+                <h2>Choose a Location</h2>
+                <div id="locations-list"></div>
+                <button id="back-to-date-btn">Back</button>
+            </div>
+        </div>
+
+        <div id="settings-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Settings</h2>
+                <div class="setting-item">
+                    <label for="text-speed">Text Speed:</label>
+                    <input type="range" id="text-speed" min="1" max="10" value="5">
+                </div>
+                <div class="setting-item">
+                    <label for="volume">Volume:</label>
+                    <input type="range" id="volume" min="0" max="1" step="0.1" value="0.7">
+                </div>
+                <button id="reset-progress">Reset All Progress</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "marked": "https://cdn.jsdelivr.net/npm/marked@4.0.0/lib/marked.esm.js"
+        }
+    }
+    </script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
